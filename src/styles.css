@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    height: 100vh;
+}
+
+.slider-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.left-slide {
+    height: 100vh;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s ease;
+}
+
+.left-slide > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.tree-content {
+    background-color: blue;
+}
+
+.castle-content {
+    background-color: red;
+}
+
+.lion-content {
+    background-color: green;
+}
+
+.mountains-content {
+    background-color: yellow;
+}
+
+.left-slide h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.right-slide {
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    top: 0;
+    left: 35%;
+    transition: 1s;
+}
+
+.right-slide > div {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.tree {
+    background-image: url("/src/img/tree.jpg");
+}
+
+.castle {
+    background-image: url("/src/img/castle.jpg");
+}
+
+.lion {
+    background-image: url("/src/img/lion.jpg");
+}
+
+.mountains {
+    background-image: url("/src/img/mountains.jpg");
+}
+
+.buttons-action button {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.buttons-action .up-button {
+ transform: translateY(-100%);
+ border-bottom-right-radius: 5px;
+ border-top-right-radius: 5px;
+}
+
+.buttons-action .down-button {
+    transform: translateX(-100%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+button:hover {
+    color: #222;
+}
